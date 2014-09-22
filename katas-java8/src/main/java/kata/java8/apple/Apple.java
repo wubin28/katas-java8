@@ -32,6 +32,10 @@ public class Apple {
         return this.weight;
     }
 
+    public static boolean isGreenApple(Apple apple) {
+        return Color.GREEN == apple.getColor();
+    }
+
     public enum Color {RED, GREEN}
 
     public static List<Apple> filterApples(List<Apple> apples, Predicate<Apple> p) {
