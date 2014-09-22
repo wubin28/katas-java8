@@ -6,6 +6,6 @@ package kata.java8.apple;
 public class HeavyApplePickingStrategy implements ApplePickingStrategy {
     @Override
     public boolean meetCriteria(Apple apple) {
-        return false;
+        return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
     }
 }
