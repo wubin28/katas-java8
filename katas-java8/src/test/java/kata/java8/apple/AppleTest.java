@@ -18,10 +18,11 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        GreenApplePicker greenApplePicker = new GreenApplePicker();
+        ApplePickingStrategy greenApplePickingStrategy = new GreenApplePickingStrategy();
+        ApplePicker applePicker = new applePicker(greenApplePickingStrategy);
 
         // Act
-        List<Apple> pickedApples = greenApplePicker.pick(apples);
+        List<Apple> pickedApples = applePicker.pick(apples);
 
         int numOfApplesPicked = 0;
         // Assert
