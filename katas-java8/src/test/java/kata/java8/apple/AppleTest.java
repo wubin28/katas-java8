@@ -15,9 +15,9 @@ public class AppleTest {
     public void the_green_apple_picker_should_pick_green_apples_only() {
         // Arrange
         List<Apple> apples = new ArrayList<Apple>();
-        apples.add(new Apple("Green"));
-        apples.add(new Apple("Red"));
-        apples.add(new Apple("Green"));
+        apples.add(new Apple(Apple.Color.GREEN));
+        apples.add(new Apple(Apple.Color.RED));
+        apples.add(new Apple(Apple.Color.GREEN));
         GreenApplePicker greenApplePicker = new GreenApplePicker();
 
         // Act
