@@ -19,7 +19,7 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
         ApplePickingStrategy greenApplePickingStrategy = new GreenApplePickingStrategy();
-        ApplePicker applePicker = new applePicker(greenApplePickingStrategy);
+        ApplePicker applePicker = new ApplePicker(greenApplePickingStrategy);
 
         // Act
         List<Apple> pickedApples = applePicker.pick(apples);
