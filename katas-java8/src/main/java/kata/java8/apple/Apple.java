@@ -1,5 +1,8 @@
 package kata.java8.apple;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by ben on 9/22/14.
  */
@@ -30,4 +33,14 @@ public class Apple {
     }
 
     public enum Color {RED, GREEN}
+
+    public static List<Apple> filterApples(List<Apple> apples, Predicate<Apple> p) {
+        List<Apple> pickedApples = new ArrayList<Apple>();
+        for (Apple apple : apples) {
+            if (p.meetCriteria(apple)) {
+                pickedApples.add(apple);
+            }
+        }
+        return pickedApples;
+    }
 }
