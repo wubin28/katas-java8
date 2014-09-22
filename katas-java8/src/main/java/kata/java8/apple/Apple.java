@@ -32,10 +32,6 @@ public class Apple {
         return this.weight;
     }
 
-    public static boolean isGreenApple(Apple apple) {
-        return Color.GREEN == apple.getColor();
-    }
-
     public static boolean isHeavyApple(Apple apple) {
         return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
     }

@@ -20,10 +20,10 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
 
         // Act
-        List<Apple> pickedApples = Apple.filterApples(apples, Apple::isGreenApple);
+        List<Apple> pickedApples = Apple.filterApples(apples, (Apple a) -> Apple.Color.GREEN == a.getColor());
 
-        int numOfApplesPicked = 0;
         // Assert
+        int numOfApplesPicked = 0;
         for (Apple apple : pickedApples) {
             assertThat(apple.getColor()).isEqualTo(Apple.Color.GREEN);
             numOfApplesPicked++;
@@ -42,8 +42,8 @@ public class AppleTest {
         // Act
         List<Apple> pickedApples = Apple.filterApples(apples, Apple::isHeavyApple);
 
-        int numOfApplesPicked = 0;
         // Assert
+        int numOfApplesPicked = 0;
         for (Apple apple : pickedApples) {
             assertThat(apple.getWeight()).isGreaterThan(150);
             numOfApplesPicked++;
