@@ -40,10 +40,11 @@ public class AppleTest {
         apples.add(new Apple(160));
         apples.add(new Apple(170));
         apples.add(new Apple(140));
-        HeavyApplePicker heavyApplePicker = new HeavyApplePicker();
+        ApplePickingStrategy heavyApplePickingStrategy = new HeavyApplePickingStrategy();
+        ApplePicker applePicker = new ApplePicker(heavyApplePickingStrategy);
 
         // Act
-        List<Apple> pickedApples = heavyApplePicker.pick(apples);
+        List<Apple> pickedApples = applePicker.pick(apples);
 
         int numOfApplesPicked = 0;
         // Assert
