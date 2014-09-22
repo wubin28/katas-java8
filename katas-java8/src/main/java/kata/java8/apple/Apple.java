@@ -7,5 +7,9 @@ public class Apple {
     public Apple(String color) {
     }
 
+    public Color getColor() {
+        return null;
+    }
+
     public enum Color {GREEN}
 }
