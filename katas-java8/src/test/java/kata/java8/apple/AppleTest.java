@@ -23,10 +23,13 @@ public class AppleTest {
         // Act
         List<Apple> pickedApples = greenApplePicker.pick(apples);
 
+        int numOfApplesPicked = 0;
         // Assert
         for (Apple apple : pickedApples) {
             assertThat(apple.getColor()).isEqualTo(Apple.Color.GREEN);
+            numOfApplesPicked++;
         }
+        assertThat(numOfApplesPicked).isEqualTo(2);
     }
 
     @Test

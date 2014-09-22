@@ -5,14 +5,20 @@ package kata.java8.apple;
  */
 public class Apple {
     public static final int HEAVY_APPLE_WEIGHS_AT_LEAST = 150;
+    private int weight;
     private Color color;
 
     public Apple(Color color) {
-        this.color = color;
+        this(color, HEAVY_APPLE_WEIGHS_AT_LEAST);
     }
 
     public Apple(int weight) {
+        this(Color.GREEN, weight);
+    }
 
+    public Apple(Color color, int weight) {
+        this.color = color;
+        this.weight = weight;
     }
 
     public Color getColor() {
@@ -20,7 +26,7 @@ public class Apple {
     }
 
     public int getWeight() {
-        return 0;
+        return this.weight;
     }
 
     public enum Color {RED, GREEN}
