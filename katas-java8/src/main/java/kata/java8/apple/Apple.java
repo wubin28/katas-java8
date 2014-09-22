@@ -7,5 +7,5 @@ public class Apple {
     public Apple(String color) {
     }
 
-    public enum Color {}
+    public enum Color {GREEN}
 }
