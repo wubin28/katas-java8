@@ -38,11 +38,9 @@ public class AppleTest {
         apples.add(new Apple(160));
         apples.add(new Apple(170));
         apples.add(new Apple(140));
-        Predicate heavyPredicate = new HeavyPredicate();
-        ApplePicker applePicker = new ApplePicker(heavyPredicate);
 
         // Act
-        List<Apple> pickedApples = applePicker.pick(apples);
+        List<Apple> pickedApples = Apple.filterApples(apples, Apple::isHeavyApple);
 
         int numOfApplesPicked = 0;
         // Assert
