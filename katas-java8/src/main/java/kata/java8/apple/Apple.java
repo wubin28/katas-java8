@@ -11,5 +11,5 @@ public class Apple {
         return null;
     }
 
-    public enum Color {GREEN}
+    public enum Color {RED, GREEN}
 }
