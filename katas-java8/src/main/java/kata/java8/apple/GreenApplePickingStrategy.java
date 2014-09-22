@@ -5,7 +5,7 @@ package kata.java8.apple;
  */
 public class GreenApplePickingStrategy implements ApplePickingStrategy {
     @Override
-    public boolean meetCriteria() {
-        return false;
+    public boolean meetCriteria(Apple apple) {
+        return apple.getColor() == Apple.Color.GREEN;
     }
 }
