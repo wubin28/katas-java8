@@ -25,7 +25,7 @@ public class AppleTest {
 
         // Assert
         for (Apple apple : pickedApples) {
-            assertThat(apple.getColor()).isEqualTo(Apple.GREEN);
+            assertThat(apple.getColor()).isEqualTo(Apple.Color.GREEN);
         }
     }
 }
