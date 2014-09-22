@@ -18,11 +18,9 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        Predicate greenPredicate = new GreenPredicate();
-        ApplePicker applePicker = new ApplePicker(greenPredicate);
 
         // Act
-        List<Apple> pickedApples = applePicker.pick(apples);
+        List<Apple> pickedApples = Apple.filterApples(apples, Apple::isGreenApple);
 
         int numOfApplesPicked = 0;
         // Assert
