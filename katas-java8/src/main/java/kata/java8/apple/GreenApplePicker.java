@@ -11,7 +11,7 @@ public class GreenApplePicker {
         List<Apple> pickedApples = new ArrayList<Apple>();
         for (Apple apple : apples) {
             if (apple.getColor() == Apple.Color.GREEN) {
-                pickedApples.add(new Apple(Apple.Color.GREEN));
+                pickedApples.add(apple);
             }
         }
         return pickedApples;
