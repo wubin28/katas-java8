@@ -6,4 +6,6 @@ package kata.java8.apple;
 public class Apple {
     public Apple(String color) {
     }
+
+    public enum Color {}
 }
