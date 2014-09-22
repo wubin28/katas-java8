@@ -7,16 +7,16 @@ import java.util.List;
  * Created by ben on 9/22/14.
  */
 public class ApplePicker {
-    private ApplePickingStrategy applePickingStrategy;
+    private Predicate predicate;
 
-    public ApplePicker(ApplePickingStrategy applePickingStrategy) {
-        this.applePickingStrategy = applePickingStrategy;
+    public ApplePicker(Predicate predicate) {
+        this.predicate = predicate;
     }
 
     public List<Apple> pick(List<Apple> apples) {
         List<Apple> pickedApples = new ArrayList<Apple>();
         for (Apple apple : apples) {
-            if (this.applePickingStrategy.meetCriteria(apple)) {
+            if (this.predicate.meetCriteria(apple)) {
                 pickedApples.add(apple);
             }
         }

@@ -18,8 +18,8 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        ApplePickingStrategy greenApplePickingStrategy = new GreenApplePickingStrategy();
-        ApplePicker applePicker = new ApplePicker(greenApplePickingStrategy);
+        Predicate greenPredicate = new GreenPredicate();
+        ApplePicker applePicker = new ApplePicker(greenPredicate);
 
         // Act
         List<Apple> pickedApples = applePicker.pick(apples);
@@ -40,8 +40,8 @@ public class AppleTest {
         apples.add(new Apple(160));
         apples.add(new Apple(170));
         apples.add(new Apple(140));
-        ApplePickingStrategy heavyApplePickingStrategy = new HeavyApplePickingStrategy();
-        ApplePicker applePicker = new ApplePicker(heavyApplePickingStrategy);
+        Predicate heavyPredicate = new HeavyPredicate();
+        ApplePicker applePicker = new ApplePicker(heavyPredicate);
 
         // Act
         List<Apple> pickedApples = applePicker.pick(apples);
