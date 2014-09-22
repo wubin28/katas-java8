@@ -16,7 +16,7 @@ public class ApplePicker {
     public List<Apple> pick(List<Apple> apples) {
         List<Apple> pickedApples = new ArrayList<Apple>();
         for (Apple apple : apples) {
-            if (this.applePickingStrategy.meetCriteria()) {
+            if (this.applePickingStrategy.meetCriteria(apple)) {
                 pickedApples.add(apple);
             }
         }
