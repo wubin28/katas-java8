@@ -41,9 +41,12 @@ public class AppleTest {
         // Act
         List<Apple> pickedApples = heavyApplePicker.pick(apples);
 
+        int numOfApplesPicked = 0;
         // Assert
         for (Apple apple : pickedApples) {
             assertThat(apple.getWeight()).isGreaterThan(150);
+            numOfApplesPicked++;
         }
+        assertThat(numOfApplesPicked).isEqualTo(2);
     }
 }
