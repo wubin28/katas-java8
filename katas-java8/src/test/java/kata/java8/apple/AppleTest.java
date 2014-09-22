@@ -40,7 +40,7 @@ public class AppleTest {
         apples.add(new Apple(140));
 
         // Act
-        List<Apple> pickedApples = Apple.filterApples(apples, Apple::isHeavyApple);
+        List<Apple> pickedApples = Apple.filterApples(apples, (Apple a) -> a.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST);
 
         // Assert
         int numOfApplesPicked = 0;

@@ -32,10 +32,6 @@ public class Apple {
         return this.weight;
     }
 
-    public static boolean isHeavyApple(Apple apple) {
-        return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
-    }
-
     public enum Color {RED, GREEN}
 
     public static List<Apple> filterApples(List<Apple> apples, Predicate<Apple> p) {
