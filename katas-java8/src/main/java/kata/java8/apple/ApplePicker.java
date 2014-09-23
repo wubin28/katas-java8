@@ -12,10 +12,10 @@ public class ApplePicker {
 
     }
 
-    public List<Apple> pick(List<Apple> apples) {
+    public List<Apple> pick(List<Apple> apples, ApplePickingStrategy applePickingStrategy) {
         List<Apple> pickedApples = new ArrayList<Apple>();
         for (Apple apple : apples) {
-            if (this.applePickingStrategy.meetCriteria(apple)) {
+            if (applePickingStrategy.meetCriteria(apple)) {
                 pickedApples.add(apple);
             }
         }
