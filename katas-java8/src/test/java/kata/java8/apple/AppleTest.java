@@ -20,7 +20,7 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
 
         // Act
-        List<Apple> pickedApples = Apple.pick(apples, Apple::isGreenApple);
+        List<Apple> pickedApples = Apple.pick(apples, (Apple apple) -> apple.getColor() == Apple.Color.GREEN);
 
         int numOfApplesPicked = 0;
         // Assert
@@ -40,7 +40,7 @@ public class AppleTest {
         apples.add(new Apple(140));
 
         // Act
-        List<Apple> pickedApples = Apple.pick(apples, Apple::isHeavyApple);
+        List<Apple> pickedApples = Apple.pick(apples, (Apple apple) -> apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST);
 
         int numOfApplesPicked = 0;
         // Assert
