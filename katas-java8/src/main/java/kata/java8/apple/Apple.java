@@ -40,9 +40,9 @@ public class Apple {
         return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
     }
 
-    public static List<Apple> pick(List<Apple> apples, ApplePickingStrategy applePickingStrategy) {
-        List<Apple> pickedApples = new ArrayList<Apple>();
-        for (Apple apple : apples) {
+    public static <T> List<T> pick(List<T> apples, ApplePickingStrategy<T> applePickingStrategy) {
+        List<T> pickedApples = new ArrayList<T>();
+        for (T apple : apples) {
             if (applePickingStrategy.meetCriteria(apple)) {
                 pickedApples.add(apple);
             }
