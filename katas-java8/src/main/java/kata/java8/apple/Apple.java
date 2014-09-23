@@ -41,14 +41,14 @@ public class Apple {
         return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
     }
 
-    public static <T> List<T> pick(List<T> apples, Predicate<T> p) {
-        List<T> pickedApples = new ArrayList<T>();
-        for (T apple : apples) {
-            if (p.test(apple)) {
-                pickedApples.add(apple);
+    public static <T> List<T> pick(List<T> list, Predicate<T> p) {
+        List<T> resultList = new ArrayList<T>();
+        for (T e : list) {
+            if (p.test(e)) {
+                resultList.add(e);
             }
         }
-        return pickedApples;
+        return resultList;
     }
 
     public enum Color {RED, GREEN}
