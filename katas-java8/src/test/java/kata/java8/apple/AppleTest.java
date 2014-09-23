@@ -18,10 +18,9 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        ApplePicker applePicker = new ApplePicker();
 
         // Act
-        List<Apple> pickedApples = applePicker.pick(apples, Apple::isGreenApple);
+        List<Apple> pickedApples = Apple.pick(apples, Apple::isGreenApple);
 
         int numOfApplesPicked = 0;
         // Assert
@@ -39,10 +38,9 @@ public class AppleTest {
         apples.add(new Apple(160));
         apples.add(new Apple(170));
         apples.add(new Apple(140));
-        ApplePicker applePicker = new ApplePicker();
 
         // Act
-        List<Apple> pickedApples = applePicker.pick(apples, Apple::isHeavyApple);
+        List<Apple> pickedApples = Apple.pick(apples, Apple::isHeavyApple);
 
         int numOfApplesPicked = 0;
         // Assert
