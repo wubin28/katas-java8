@@ -2,6 +2,7 @@ package kata.java8.apple;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Created by ben on 9/22/14.
@@ -40,10 +41,10 @@ public class Apple {
         return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
     }
 
-    public static <T> List<T> pick(List<T> apples, ApplePickingStrategy<T> applePickingStrategy) {
+    public static <T> List<T> pick(List<T> apples, Predicate<T> p) {
         List<T> pickedApples = new ArrayList<T>();
         for (T apple : apples) {
-            if (applePickingStrategy.meetCriteria(apple)) {
+            if (p.test(apple)) {
                 pickedApples.add(apple);
             }
         }
