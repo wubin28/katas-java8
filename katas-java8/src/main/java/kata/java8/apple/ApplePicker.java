@@ -7,10 +7,9 @@ import java.util.List;
  * Created by ben on 9/22/14.
  */
 public class ApplePicker {
-    private ApplePickingStrategy applePickingStrategy;
 
-    public ApplePicker(ApplePickingStrategy applePickingStrategy) {
-        this.applePickingStrategy = applePickingStrategy;
+    public ApplePicker() {
+
     }
 
     public List<Apple> pick(List<Apple> apples) {
