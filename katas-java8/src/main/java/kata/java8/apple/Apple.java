@@ -33,14 +33,6 @@ public class Apple {
         return this.weight;
     }
 
-    public static boolean isGreenApple(Apple apple) {
-        return apple.getColor() == Color.GREEN;
-    }
-
-    public static boolean isHeavyApple(Apple apple) {
-        return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
-    }
-
     public static <T> List<T> pick(List<T> list, Predicate<T> p) {
         List<T> resultList = new ArrayList<T>();
         for (T e : list) {
