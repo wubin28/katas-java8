@@ -18,8 +18,12 @@ public class AppleTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        ApplePickingStrategy greenApplePickingStrategy = new GreenApplePickingStrategy();
-        ApplePicker applePicker = new ApplePicker(greenApplePickingStrategy);
+        ApplePicker applePicker = new ApplePicker(new ApplePickingStrategy() {
+            @Override
+            public boolean meetCriteria(Apple apple) {
+                return Apple.Color.GREEN == apple.getColor();
+            }
+        });
 
         // Act
         List<Apple> pickedApples = applePicker.pick(apples);
@@ -40,8 +44,12 @@ public class AppleTest {
         apples.add(new Apple(160));
         apples.add(new Apple(170));
         apples.add(new Apple(140));
-        ApplePickingStrategy heavyApplePickingStrategy = new HeavyApplePickingStrategy();
-        ApplePicker applePicker = new ApplePicker(heavyApplePickingStrategy);
+        ApplePicker applePicker = new ApplePicker(new ApplePickingStrategy() {
+            @Override
+            public boolean meetCriteria(Apple apple) {
+                return apple.getWeight() > Apple.HEAVY_APPLE_WEIGHS_AT_LEAST;
+            }
+        });
 
         // Act
         List<Apple> pickedApples = applePicker.pick(apples);
