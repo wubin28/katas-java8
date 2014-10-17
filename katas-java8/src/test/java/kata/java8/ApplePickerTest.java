@@ -10,6 +10,9 @@ import static org.fest.assertions.Assertions.assertThat;
 public class ApplePickerTest {
     @Test
     public void the_green_apple_picker_should_pick_green_apples_only() {
-        assertThat(2 + 3).isEqualTo(5);
+        // Assert
+        for (Apple apple : apples) {
+            assertThat(apple.getColor()).isEqualTo(Apple.Color.GREEN);
+        }
     }
 }
