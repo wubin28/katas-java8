@@ -21,12 +21,7 @@ public class ApplePickerTest {
         ApplePicker applePicker = new ApplePicker();
 
         // Act
-        List<Apple> pickedApples = applePicker.pick(apples, new ApplePickingStrategy() {
-            @Override
-            protected boolean meetCriteria(Apple apple) {
-                return apple.getColor() == Apple.Color.GREEN;
-            }
-        });
+        List<Apple> pickedApples = applePicker.pick(apples, Apple::isGreenApple);
 
         // Assert
         assertThat(pickedApples.size()).isEqualTo(2);
@@ -45,12 +40,7 @@ public class ApplePickerTest {
 
         // Act
         ApplePicker applePicker = new ApplePicker();
-        List<Apple> pickedApples = applePicker.pick(apples, new ApplePickingStrategy() {
-            @Override
-            protected boolean meetCriteria(Apple apple) {
-                return apple.getWeight() >= Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE;
-            }
-        });
+        List<Apple> pickedApples = applePicker.pick(apples, Apple::isHeavyApple);
 
         // Assert
         assertThat(pickedApples.size()).isEqualTo(1);
