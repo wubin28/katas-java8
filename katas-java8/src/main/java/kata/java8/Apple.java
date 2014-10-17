@@ -24,13 +24,5 @@ public class Apple {
         return this.weight;
     }
 
-    public static boolean isGreenApple(Apple apple) {
-        return apple.getColor() == Color.GREEN;
-    }
-
-    public static boolean isHeavyApple(Apple apple) {
-        return apple.getWeight() >= MINIMUM_GRAMS_OF_HEAVY_APPLE;
-    }
-
     public enum Color {RED, GREEN}
 }
