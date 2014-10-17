@@ -18,9 +18,10 @@ public class ApplePickerTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
+        GreenApplePicker greenApplePicker = new GreenApplePicker();
 
         // Act
-        List<Apple> pickedApples = greenApplePicker(apples);
+        List<Apple> pickedApples = greenApplePicker.pick(apples);
 
         // Assert
         assertThat(pickedApples.size()).isEqualTo(2);
