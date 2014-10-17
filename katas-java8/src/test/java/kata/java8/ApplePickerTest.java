@@ -29,4 +29,13 @@ public class ApplePickerTest {
             assertThat(apple.getColor()).isEqualTo(Apple.Color.GREEN);
         }
     }
+
+    @Test
+    public void the_heavy_apple_picker_should_pick_heavy_apples_only() {
+        // Assert
+        assertThat(pickedApples.size()).isEqualTo(1);
+        for (Apple apple : pickedApples) {
+            assertThat(apple.getWeight()).isGreaterThan(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE);
+        }
+    }
 }
