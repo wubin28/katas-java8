@@ -1,5 +1,7 @@
 package kata.java8;
 
+import java.util.List;
+
 /**
  * Created by ben on 10/17/14.
  */
@@ -22,6 +24,10 @@ public class Apple {
 
     public int getWeight() {
         return this.weight;
+    }
+
+    public static List<Apple> pick(List<Apple> apples, ApplePickingStrategy applePickingStrategy) {
+        return null;
     }
 
     public enum Color {RED, GREEN}
