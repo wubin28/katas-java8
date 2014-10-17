@@ -1,12 +1,9 @@
 package kata.java8;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Created by ben on 10/17/14.
  */
-public class HeavyApplePicker extends ApplePicker {
+public class HeavyApplePickingStrategy extends ApplePickingStrategy {
 
     @Override
     protected boolean meetCriteria(Apple apple) {

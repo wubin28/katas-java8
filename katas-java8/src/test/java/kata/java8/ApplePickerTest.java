@@ -18,7 +18,7 @@ public class ApplePickerTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        GreenApplePicker greenApplePicker = new GreenApplePicker();
+        GreenApplePickingStrategy greenApplePicker = new GreenApplePickingStrategy();
 
         // Act
         List<Apple> pickedApples = greenApplePicker.pick(apples);
@@ -37,7 +37,7 @@ public class ApplePickerTest {
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE + 10));
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
-        HeavyApplePicker heavyApplePicker = new HeavyApplePicker();
+        HeavyApplePickingStrategy heavyApplePicker = new HeavyApplePickingStrategy();
 
         // Act
         List<Apple> pickedApples = heavyApplePicker.pick(apples);

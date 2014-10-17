@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by ben on 10/17/14.
  */
-public abstract class ApplePicker {
+public abstract class ApplePickingStrategy {
     public List<Apple> pick(List<Apple> apples) {
         List<Apple> pickedApples = new ArrayList<>();
         for (Apple apple : apples) {
