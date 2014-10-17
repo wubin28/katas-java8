@@ -9,8 +9,11 @@ import java.util.List;
 public class GreenApplePicker {
     public List<Apple> pick(List<Apple> apples) {
         List<Apple> pickedApples = new ArrayList<Apple>();
-        pickedApples.add(new Apple(Apple.Color.GREEN));
-        pickedApples.add(new Apple(Apple.Color.GREEN));
+        for (Apple apple : apples) {
+            if (apple.getColor() == Apple.Color.GREEN) {
+                pickedApples.add(apple);
+            }
+        }
         return pickedApples;
     }
 }
