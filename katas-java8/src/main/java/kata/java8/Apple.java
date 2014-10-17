@@ -2,6 +2,7 @@ package kata.java8;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Created by ben on 10/17/14.
@@ -27,10 +28,10 @@ public class Apple {
         return this.weight;
     }
 
-    public static List<Apple> pick(List<Apple> apples, ApplePickingStrategy applePickingStrategy) {
+    public static List<Apple> pick(List<Apple> apples, Predicate<Apple> applePickingStrategy) {
         List<Apple> pickedApples = new ArrayList<>();
         for (Apple apple : apples) {
-            if (applePickingStrategy.meetCriteria(apple)) {
+            if (applePickingStrategy.test(apple)) {
                 pickedApples.add(apple);
             }
         }
