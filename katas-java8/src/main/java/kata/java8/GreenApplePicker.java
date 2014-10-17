@@ -6,18 +6,10 @@ import java.util.List;
 /**
  * Created by ben on 10/17/14.
  */
-public class GreenApplePicker {
-    public List<Apple> pick(List<Apple> apples) {
-        List<Apple> pickedApples = new ArrayList<>();
-        for (Apple apple : apples) {
-            if (meetCriteria(apple)) {
-                pickedApples.add(apple);
-            }
-        }
-        return pickedApples;
-    }
+public class GreenApplePicker extends ApplePicker {
 
-    private boolean meetCriteria(Apple apple) {
+    @Override
+    protected boolean meetCriteria(Apple apple) {
         return apple.getColor() == Apple.Color.GREEN;
     }
 }
