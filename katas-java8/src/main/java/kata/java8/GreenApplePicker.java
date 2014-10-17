@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class GreenApplePicker {
     public List<Apple> pick(List<Apple> apples) {
-        List<Apple> pickedApples = new ArrayList<Apple>();
+        List<Apple> pickedApples = new ArrayList<>();
         for (Apple apple : apples) {
             if (meetCriteria(apple)) {
                 pickedApples.add(apple);
