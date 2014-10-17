@@ -18,10 +18,10 @@ public class ApplePickerTest {
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
-        GreenApplePickingStrategy greenApplePicker = new GreenApplePickingStrategy();
+        GreenApplePickingStrategy greenApplePickingStrategy = new GreenApplePickingStrategy();
 
         // Act
-        List<Apple> pickedApples = greenApplePicker.pick(apples);
+        List<Apple> pickedApples = greenApplePickingStrategy.pick(apples);
 
         // Assert
         assertThat(pickedApples.size()).isEqualTo(2);
@@ -37,10 +37,10 @@ public class ApplePickerTest {
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE + 10));
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
         apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
-        HeavyApplePickingStrategy heavyApplePicker = new HeavyApplePickingStrategy();
+        HeavyApplePickingStrategy heavyApplePickingStrategy = new HeavyApplePickingStrategy();
 
         // Act
-        List<Apple> pickedApples = heavyApplePicker.pick(apples);
+        List<Apple> pickedApples = heavyApplePickingStrategy.pick(apples);
 
         // Assert
         assertThat(pickedApples.size()).isEqualTo(1);
