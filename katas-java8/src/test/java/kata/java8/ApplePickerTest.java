@@ -14,7 +14,7 @@ public class ApplePickerTest {
     @Test
     public void the_green_apple_picker_should_pick_green_apples_only() {
         // Arrange
-        List<Apple> apples = new ArrayList<Apple>();
+        List<Apple> apples = new ArrayList<>();
         apples.add(new Apple(Apple.Color.GREEN));
         apples.add(new Apple(Apple.Color.RED));
         apples.add(new Apple(Apple.Color.GREEN));
@@ -32,6 +32,16 @@ public class ApplePickerTest {
 
     @Test
     public void the_heavy_apple_picker_should_pick_heavy_apples_only() {
+        // Arrange
+        List<Apple> apples = new ArrayList<>();
+        apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE + 10));
+        apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
+        apples.add(new Apple(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE - 10));
+        HeavyApplePicker heavyApplePicker = new HeavyApplePicker();
+
+        // Act
+        List<Apple> pickedApples = heavyApplePicker.pick(apples);
+
         // Assert
         assertThat(pickedApples.size()).isEqualTo(1);
         for (Apple apple : pickedApples) {
