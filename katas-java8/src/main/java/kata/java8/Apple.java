@@ -19,5 +19,9 @@ public class Apple {
         return this.color;
     }
 
+    public int getWeight() {
+        return 0;
+    }
+
     public enum Color {RED, GREEN}
 }
