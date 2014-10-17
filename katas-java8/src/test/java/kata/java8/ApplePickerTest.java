@@ -1,5 +1,7 @@
 package kata.java8;
 
+import org.junit.Test;
+
 /**
  * Created by ben on 10/17/14.
  */
