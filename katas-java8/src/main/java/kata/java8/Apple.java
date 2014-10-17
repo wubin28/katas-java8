@@ -8,5 +8,9 @@ public class Apple {
 
     }
 
+    public Color getColor() {
+        return null;
+    }
+
     public enum Color {RED, GREEN}
 }
