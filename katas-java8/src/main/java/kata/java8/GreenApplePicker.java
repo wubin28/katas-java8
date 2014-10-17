@@ -10,10 +10,14 @@ public class GreenApplePicker {
     public List<Apple> pick(List<Apple> apples) {
         List<Apple> pickedApples = new ArrayList<Apple>();
         for (Apple apple : apples) {
-            if (apple.getColor() == Apple.Color.GREEN) {
+            if (meetCriteria(apple)) {
                 pickedApples.add(apple);
             }
         }
         return pickedApples;
+    }
+
+    private boolean meetCriteria(Apple apple) {
+        return apple.getColor() == Apple.Color.GREEN;
     }
 }
