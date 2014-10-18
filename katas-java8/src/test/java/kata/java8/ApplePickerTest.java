@@ -46,4 +46,10 @@ public class ApplePickerTest {
             assertThat(apple.getWeight()).isGreaterThan(Apple.MINIMUM_GRAMS_OF_HEAVY_APPLE);
         }
     }
+
+    @Test
+    public void list_the_names_of_apples_heavier_than_90_grams_being_sorted_by_weight() {
+        // Assert
+        assertThat(filteredAndSortedList).isEqualsTo(expectedList);
+    }
 }
