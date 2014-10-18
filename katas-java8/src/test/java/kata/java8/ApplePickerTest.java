@@ -3,6 +3,7 @@ package kata.java8;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.fest.assertions.Assertions.assertThat;
@@ -49,6 +50,21 @@ public class ApplePickerTest {
 
     @Test
     public void list_the_names_of_apples_heavier_than_90_grams_being_sorted_by_weight() {
+        // Arrange
+        List<Apple> apples = Arrays.asList(
+                new Apple("WolfRiver", 300),
+                new Apple("CentennialCrab", 80),
+                new Apple("Discovery", 260),
+                new Apple("Dabinett", 85),
+                new Apple("King", 255),
+                new Apple("NewtonPippin", 90)
+        );
+        List<String> expectedList = new ArrayList<>(Arrays.asList(
+                "WolfRiver", "Discovery", "King"));
+
+        // Act
+        List<String> filteredAndSortedList = Apple.listNamesOfApplesHeavierThan90GramsSortedByWeight(apples);
+
         // Assert
         assertThat(filteredAndSortedList).isEqualsTo(expectedList);
     }
