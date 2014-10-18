@@ -42,5 +42,9 @@ public class Apple {
         return pickedApples;
     }
 
+    public static List<String> listNamesOfApplesHeavierThan90GramsSortedByWeight(List<Apple> apples) {
+        return null;
+    }
+
     public enum Color {RED, GREEN}
 }
