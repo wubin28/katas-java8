@@ -20,6 +20,10 @@ public class Apple {
         this.weight = weight;
     }
 
+    public Apple(String varietyName, int weightInGrams) {
+
+    }
+
     public Color getColor() {
         return this.color;
     }
