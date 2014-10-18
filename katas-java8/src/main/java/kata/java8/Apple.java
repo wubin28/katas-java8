@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
+import static java.util.Comparator.comparing;
+
 /**
  * Created by ben on 10/17/14.
  */
