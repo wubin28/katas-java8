@@ -13,6 +13,7 @@ public class Apple {
     public static final int MINIMUM_GRAMS_OF_HEAVY_APPLE = 150;
     private Color color;
     private int weight;
+    private String varietyName;
 
     public Apple(Color color) {
         this.color = color;
@@ -50,6 +51,10 @@ public class Apple {
                 .sorted(comparing(Apple::getWeight))
                 .map(Apple::getVarietyName)
                 .collect(toList());
+    }
+
+    public String getVarietyName() {
+        return this.varietyName;
     }
 
     public enum Color {RED, GREEN}
