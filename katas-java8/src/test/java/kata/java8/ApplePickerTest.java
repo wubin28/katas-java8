@@ -54,9 +54,9 @@ public class ApplePickerTest {
         List<Apple> apples = Arrays.asList(
                 new Apple("WolfRiver", 300),
                 new Apple("CentennialCrab", 80),
+                new Apple("King", 255),
                 new Apple("Discovery", 260),
                 new Apple("Dabinett", 85),
-                new Apple("King", 255),
                 new Apple("NewtonPippin", 90)
         );
         List<String> expectedList = new ArrayList<>(Arrays.asList(

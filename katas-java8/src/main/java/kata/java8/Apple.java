@@ -25,7 +25,8 @@ public class Apple {
     }
 
     public Apple(String varietyName, int weightInGrams) {
-
+        this.varietyName = varietyName;
+        this.weight = weightInGrams;
     }
 
     public Color getColor() {
@@ -49,7 +50,7 @@ public class Apple {
     public static List<String> listNamesOfApplesHeavierThan90GramsSortedByWeight(List<Apple> apples) {
         return apples.stream()
                 .filter(a -> a.getWeight() > 90)
-                .sorted(comparing(Apple::getWeight))
+                .sorted((a1, a2) -> a2.getWeight() - a1.getWeight())
                 .map(Apple::getVarietyName)
                 .collect(toList());
     }
