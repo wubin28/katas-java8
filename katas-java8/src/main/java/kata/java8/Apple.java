@@ -64,7 +64,11 @@ public class Apple {
     }
 
     public static int sumWeightOf3HeaviestApples(List<Apple> apples) {
-        return 0;
+        return apples.stream()
+                .sorted((a1, a2) -> a2.getWeight() - a1.getWeight())
+                .limit(3)
+                .map(Apple::getWeight)
+                .reduce(0, (a, b) -> (a + b));
     }
 
     public enum Color {RED, GREEN}
