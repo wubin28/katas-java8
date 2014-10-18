@@ -55,6 +55,10 @@ public class Apple {
                 .collect(toList());
     }
 
+    public String getVarietyNameWithWeight() {
+        return this.getVarietyName() + "-" + this.getWeight();
+    }
+
     public String getVarietyName() {
         return this.varietyName;
     }
