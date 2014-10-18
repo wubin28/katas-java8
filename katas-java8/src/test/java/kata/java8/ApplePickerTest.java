@@ -60,7 +60,7 @@ public class ApplePickerTest {
                 new Apple("NewtonPippin", 90)
         );
         List<String> expectedList = new ArrayList<>(Arrays.asList(
-                "WolfRiver", "Discovery", "King"));
+                "WolfRiver-300", "Discovery-260", "King-255"));
 
         // Act
         List<String> filteredAndSortedList = Apple.listNamesOfApplesHeavierThan90GramsSortedByWeight(apples);
