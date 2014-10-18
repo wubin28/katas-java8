@@ -68,4 +68,10 @@ public class ApplePickerTest {
         // Assert
         assertThat(filteredAndSortedList).isEqualTo(expectedList);
     }
+
+    @Test
+    public void sum_the_weight_of_the_3_heaviest_apples() {
+        // Assert
+        assertThat(sumOfWeightOf3HeaviestApples).isEqualTo(300 + 260 + 255);
+    }
 }
