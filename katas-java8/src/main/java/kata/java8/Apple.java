@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 
 import static java.util.Comparator.comparing;
+import static java.util.stream.Collectors.toList;
 
 /**
  * Created by ben on 10/17/14.
