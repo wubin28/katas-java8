@@ -66,6 +66,6 @@ public class ApplePickerTest {
         List<String> filteredAndSortedList = Apple.listNamesOfApplesHeavierThan90GramsSortedByWeight(apples);
 
         // Assert
-        assertThat(filteredAndSortedList).isEqualsTo(expectedList);
+        assertThat(filteredAndSortedList).isEqualTo(expectedList);
     }
 }
