@@ -43,7 +43,11 @@ public class Apple {
     }
 
     public static List<String> listNamesOfApplesHeavierThan90GramsSortedByWeight(List<Apple> apples) {
-        return null;
+        return apples.stream()
+                .filter(a -> a.getWeight() > 90)
+                .sorted(comparing(Apple::getWeight))
+                .map(Apple::getVarietyName)
+                .collect(toList());
     }
 
     public enum Color {RED, GREEN}
