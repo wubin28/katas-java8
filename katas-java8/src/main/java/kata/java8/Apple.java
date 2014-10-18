@@ -51,7 +51,7 @@ public class Apple {
         return apples.stream()
                 .filter(a -> a.getWeight() > 90)
                 .sorted((a1, a2) -> a2.getWeight() - a1.getWeight())
-                .map(Apple::getVarietyName)
+                .map(Apple::getVarietyNameWithWeight)
                 .collect(toList());
     }
 
