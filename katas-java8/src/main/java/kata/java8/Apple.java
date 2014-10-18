@@ -63,5 +63,9 @@ public class Apple {
         return this.varietyName;
     }
 
+    public static int sumWeightOf3HeaviestApples(List<Apple> apples) {
+        return 0;
+    }
+
     public enum Color {RED, GREEN}
 }
