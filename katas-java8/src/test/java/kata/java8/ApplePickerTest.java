@@ -71,6 +71,19 @@ public class ApplePickerTest {
 
     @Test
     public void sum_the_weight_of_the_3_heaviest_apples() {
+        // Arrange
+        List<Apple> apples = Arrays.asList(
+                new Apple("WolfRiver", 300),
+                new Apple("CentennialCrab", 80),
+                new Apple("King", 255),
+                new Apple("Discovery", 260),
+                new Apple("Dabinett", 85),
+                new Apple("NewtonPippin", 90)
+        );
+
+        // Act
+        int sumOfWeightOf3HeaviestApples = Apple.sumWeightOf3HeaviestApples(apples);
+
         // Assert
         assertThat(sumOfWeightOf3HeaviestApples).isEqualTo(300 + 260 + 255);
     }
