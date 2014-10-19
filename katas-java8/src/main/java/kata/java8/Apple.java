@@ -71,5 +71,9 @@ public class Apple {
                 .reduce(0, (a, b) -> (a + b));
     }
 
+    public static String reportSumOf3HeaviestApples(List<Apple> apples) {
+        return null;
+    }
+
     public enum Color {RED, GREEN}
 }
