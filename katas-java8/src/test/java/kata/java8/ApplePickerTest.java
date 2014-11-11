@@ -82,11 +82,9 @@ public class ApplePickerTest {
         );
 
         // Act
-        int sumOfWeightOf3HeaviestApples = Apple.sumWeightOf3HeaviestApples(apples);
         String reportSum = Apple.reportSumOf3HeaviestApples(apples);
 
         // Assert
-        assertThat(sumOfWeightOf3HeaviestApples).isEqualTo(300 + 260 + 255);
-        assertThat(reportSum).isEqualTo("WolfRiver(300) + Discovery(260) + King(255) = 815");
+        assertThat(reportSum).isEqualTo("[WolfRiver-300, Discovery-260, King-255]" + " = 815");
     }
 }
